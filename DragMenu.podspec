@@ -17,17 +17,17 @@ Pod::Spec.new do |s|
 
   s.name         = "DragMenu"
   s.version      = "0.0.1"
-  s.summary      = "A short description of DragMenu."
+  s.summary      = "Objective-C for ImagePicker(https://github.com/hg45hg2000/DragMenu.git."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-                   DESC
+  # s.description  = <<-DESC
+  #                 DESC
 
-  s.homepage     = "https://github.com/hg45hg2000/DragMenu.git"
+  s.homepage     = "https://github.com/hg45hg2000/DragMenu"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,10 +38,10 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
-
+  s.platform = :ios, '6.0'
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  Specify the authors of the library, with email addresses. Email addresses
@@ -52,7 +52,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "HENRY" => "hg45hg2000@me.com" }
+  s.author             = { "HENRY" => "" }
   # Or just: s.author    = "HENRY"
   # s.authors            = { "HENRY" => "" }
   # s.social_media_url   = "http://twitter.com/HENRY"
@@ -90,8 +90,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "DragMenu", "DragMenu/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "DragMenu"
+  #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -129,7 +129,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
