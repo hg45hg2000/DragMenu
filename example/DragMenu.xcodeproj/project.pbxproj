@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		BACA901820E4E7DE005DEB8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BACA901720E4E7DE005DEB8D /* AppDelegate.m */; };
-		BACA901B20E4E7DE005DEB8D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BACA901A20E4E7DE005DEB8D /* ViewController.m */; };
 		BACA901E20E4E7DE005DEB8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA901C20E4E7DE005DEB8D /* Main.storyboard */; };
 		BACA902020E4E7DF005DEB8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACA901F20E4E7DF005DEB8D /* Assets.xcassets */; };
 		BACA902320E4E7DF005DEB8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA902120E4E7DF005DEB8D /* LaunchScreen.storyboard */; };
 		BACA902620E4E7DF005DEB8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BACA902520E4E7DF005DEB8D /* main.m */; };
 		BACA903020E4E7DF005DEB8D /* DragMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BACA902F20E4E7DF005DEB8D /* DragMenuTests.m */; };
 		BACA903B20E4E7E0005DEB8D /* DragMenuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BACA903A20E4E7E0005DEB8D /* DragMenuUITests.m */; };
+		BACC471220E9F0560016B026 /* DragableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BACC470E20E9F0560016B026 /* DragableTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,6 @@
 		BACA901320E4E7DE005DEB8D /* DragMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACA901620E4E7DE005DEB8D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BACA901720E4E7DE005DEB8D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BACA901920E4E7DE005DEB8D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BACA901A20E4E7DE005DEB8D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BACA901D20E4E7DE005DEB8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BACA901F20E4E7DF005DEB8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BACA902220E4E7DF005DEB8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +49,8 @@
 		BACA903620E4E7E0005DEB8D /* DragMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACA903A20E4E7E0005DEB8D /* DragMenuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragMenuUITests.m; sourceTree = "<group>"; };
 		BACA903C20E4E7E0005DEB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BACC470E20E9F0560016B026 /* DragableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragableTableView.m; sourceTree = "<group>"; };
+		BACC470F20E9F0560016B026 /* DragableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragableTableView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +101,9 @@
 		BACA901520E4E7DE005DEB8D /* DragMenu */ = {
 			isa = PBXGroup;
 			children = (
+				BACC470C20E9F0560016B026 /* DragMenu */,
 				BACA901620E4E7DE005DEB8D /* AppDelegate.h */,
 				BACA901720E4E7DE005DEB8D /* AppDelegate.m */,
-				BACA901920E4E7DE005DEB8D /* ViewController.h */,
-				BACA901A20E4E7DE005DEB8D /* ViewController.m */,
 				BACA901C20E4E7DE005DEB8D /* Main.storyboard */,
 				BACA901F20E4E7DF005DEB8D /* Assets.xcassets */,
 				BACA902120E4E7DF005DEB8D /* LaunchScreen.storyboard */,
@@ -130,6 +129,16 @@
 				BACA903C20E4E7E0005DEB8D /* Info.plist */,
 			);
 			path = DragMenuUITests;
+			sourceTree = "<group>";
+		};
+		BACC470C20E9F0560016B026 /* DragMenu */ = {
+			isa = PBXGroup;
+			children = (
+				BACC470F20E9F0560016B026 /* DragableTableView.h */,
+				BACC470E20E9F0560016B026 /* DragableTableView.m */,
+			);
+			name = DragMenu;
+			path = ../../DragMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BACA901B20E4E7DE005DEB8D /* ViewController.m in Sources */,
 				BACA902620E4E7DF005DEB8D /* main.m in Sources */,
 				BACA901820E4E7DE005DEB8D /* AppDelegate.m in Sources */,
+				BACC471220E9F0560016B026 /* DragableTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

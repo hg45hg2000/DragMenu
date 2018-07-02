@@ -7,7 +7,6 @@
 //
 
 #import "DragableTableView.h"
-#import "MemberDataManager.h"
 
 CGFloat const MenuWidthRadio = 0.6666;
 
@@ -31,7 +30,6 @@ CGFloat const loadingViewDefaultBlockAphla  = 0.8;
 @property(assign , nonatomic)BOOL didScroll;
 @property(strong , nonatomic)UIView *loadingView;
 
-@property(strong , nonatomic)MenuCell *selectedMenuCell;
 
 @end
 
@@ -69,7 +67,6 @@ CGFloat const loadingViewDefaultBlockAphla  = 0.8;
 
 - (void)initMenuTableViewFrame:(CGRect)frame{
     [self setupMenuTableViewFrame:frame];
-    self.backgroundColor  = [UIColor PoyaPinkThemeColor];
     
     UIView *footerView = [[UIView alloc] initWithFrame:frame];
     footerView.backgroundColor = [UIColor whiteColor];
@@ -92,20 +89,12 @@ CGFloat const loadingViewDefaultBlockAphla  = 0.8;
 }
 
 - (void)initComponent{
-    [self regiserNibCellName:[MenuCell identifer]];
-    
     [self addPangGesture:self];
     self.delegate = self;
-    self.personalHeadView = [[MenuPersonalCell alloc]  PoyaCodeXibConntect];
-    
-    self.tableHeaderView = self.personalHeadView;;
-    self.showsVerticalScrollIndicator = false;
+
     self.showsHorizontalScrollIndicator = false;
 }
 
-- (void)registerMenuPersonalCellDelegate:(id< MenuPersonalCellDelegate>)delegate{
-    self.personalHeadView.delegate = delegate;
-}
 
 - (void)initLoadingViewFrame:(CGRect)frame{
     
@@ -166,8 +155,6 @@ CGFloat const loadingViewDefaultBlockAphla  = 0.8;
 
 - (void)setSelectedMenuCell:(BOOL)selected atIndexPath:(NSIndexPath*)indexPath{
 //    self.menuList[indexPath.row].isCellSelected = selected;
-    self.selectedMenuCell = [self cellForRowAtIndexPath:indexPath];
-    [self.selectedMenuCell setCellSelected:selected];
 }
 
 #pragma  mark IScreenEdgePanGestureRecognizer

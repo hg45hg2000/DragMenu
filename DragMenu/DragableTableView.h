@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MenuPersonalCell.h"
-#import "UserDataAPI.h"
-#import "MenuCellViewModel.h"
-#import "MenuCell.h"
+
 @class DragableTableView;
 @protocol DragTableViewDelegate <NSObject>
 
@@ -30,7 +27,6 @@
 
 - (void)addTableView:(UIView*)sourceView;
 
-- (void)registerMenuPersonalCellDelegate:(id< MenuPersonalCellDelegate>)delegate;
 
 - (void)moveTableView;
 
@@ -43,7 +39,6 @@
 
 @property(weak,nonatomic)id <DragTableViewDelegate> dragTableDelegate;
 @property (assign,nonatomic)BOOL didOpenTableView;
-@property(strong , nonatomic)MenuPersonalCell *personalHeadView;
 @property (nonatomic, readonly) NSIndexPath *lastIndexPathForSelectedRow;
 //@property(strong , nonatomic)NSMutableArray <MenuCellViewModel*>*menuList;
 @end

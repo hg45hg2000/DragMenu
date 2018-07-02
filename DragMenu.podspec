@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DragMenu"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Objective-C for ImagePicker(https://github.com/hg45hg2000/DragMenu.git."
 
   # This description is used to generate tags and improve search results.
